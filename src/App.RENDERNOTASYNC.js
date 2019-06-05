@@ -14,14 +14,13 @@ class App extends React.Component {
           <h1>React</h1>
         </header>
         <button
-          onClick={() => {
+          onClick={() =>
             this.setState(state => {
               let list = [];
               for (let i = 0; i < 1e5; i++) list.push(i);
               return { ...state, list };
-            });
-            console.log("The async state is done");
-          }}
+            })
+          }
         >
           btn
         </button>
@@ -36,7 +35,7 @@ class App extends React.Component {
         </button>
         <div>{this.state.counter}</div>
         <hr />
-        {this.state.list.length > 0 && this.state.list.map(el => <p key={el}>{el}</p>)}
+        {this.state.list.length > 0 && this.state.list.map(el => <p>{el}</p>)}
       </div>
     );
   }
