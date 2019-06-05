@@ -20,7 +20,7 @@ class App extends React.Component {
               for (let i = 0; i < 1e5; i++) list.push(i);
               return { ...state, list };
             });
-            console.log("The async state is done");
+            console.log("The async state is not blocking this, but the rendering will block");
           }}
         >
           btn
